@@ -168,9 +168,9 @@ div.card {
                 display: none;
             }
 
-
-            .card::before {
-                content: "\1F44D";
-            }
+/* Without using list-style-type add the thumbs up entity as shown in the cards
+They should be just after the second li item in each card class */
+  .card li:nth-child(2)::after {
+  content: "\1F44D"; 
+  }
 }
-
