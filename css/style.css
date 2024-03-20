@@ -144,26 +144,30 @@ div.card {
 
         }
         
+/* set the container of the nav_links to the width of the whole page */
 
-        .nav_links {
-            display: flex;
-            flex-direction: row;
-            /* justify-content: space-between; */
-           
-        }
+            ul.nav_links {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              padding: 0;
+              margin: 0;
+            }
+
+    
     
             .pricing {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                /* align-items: flex-end; */
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              align-items: flex-end;
             }
           
             .card {
-                flex: 0 0 325px;
-                border: 2px solid #45ADDD;
+            display: flex;
+            flex: 325px;
+            border: 2px solid #45ADDD;
             }
-            
             
             .gallery {
                 display: none;
