@@ -1,5 +1,9 @@
 
 /* animate the logo with a keyframe */
+#logo {
+  animation: logo 5s;
+}
+
 @keyframes logo {
   from {
     width: 25px;
