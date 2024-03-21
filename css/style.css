@@ -135,6 +135,12 @@ div.card {
         top: 0;
         width: 100%;
     }
+
+    /* add padding to the main content so header doesn't cover h1 */
+    main {
+        padding-top: 100px;
+    
+    }
   
 }
 
