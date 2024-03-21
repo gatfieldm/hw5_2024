@@ -1,4 +1,5 @@
 
+/* animate the logo with a keyframe */
 @keyframes logo {
   from {
     width: 25px;
@@ -10,7 +11,7 @@
   }
 }
 
-
+/* style the body with imported font and background image/color */
 body {
   font-family: "Poppins", serif;
   background-image: url('/images/concrete_seamless.png');
@@ -18,30 +19,27 @@ body {
 }
 
 
-
+/* style the header with flex properties */
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
   
-
+/*set column flex direction for the nav links */
 .nav_links {
   display: flex;
   flex-direction: column;
 
 }
 
-
-
-
+/* set the color of the visited links to be the same as unvisited links */
 .nav_links a:visited {
   color: #0000EE;
 }
 
 
-
-
+/* style the direct children of card class that are header elements */
 .card > header {
   background: #288088;
   border: 2px solid #45ADAD;
@@ -51,13 +49,14 @@ header {
   border-top-right-radius: 50px;
 }
 
-
+/* add borders to top left and right of each card */
 div.card {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 
 }
 
+/*assign flex basis of 450px to each card, with a column flex direction */
 .card{
     flex: 0 0 450px;
     display: flex;
@@ -66,7 +65,7 @@ div.card {
 }
 
 
-
+/* add flex properties to pricing class, including wrap */
 .pricing {
   display: flex;
   flex-direction: row;
@@ -76,7 +75,7 @@ div.card {
 }
 
 
-
+/* give every gallery image a border, margin, and width */
 .gallery img {
   border: 10px solid #50C7C7;
   margin: 10px;
@@ -84,7 +83,7 @@ div.card {
 }
 
 
-
+/* add a flex wrap to the gallery class */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -93,35 +92,40 @@ div.card {
 }
 
 
-
+/* add breakpoint for viewports larger than 900px */
 @media (min-width: 900px) {
 
 
+  /* add flex properties to the header */
     header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
+
+    /* update elements in nav_links class to be flex */
     .nav_links {
         display: flex;
         flex-direction: row;
     }
 
 
-
+   /* add proper flex properties for pricing class, so the cards display nicely horizontally*/
     .pricing {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
+
+    /* flex basis of 275px for each card */
     .card {
         flex: 0 0 275px;
     }
 
  
-
+    /* create a fixed header, but not the header in main */
     header:not(main header):first-of-type {
         position: fixed;
         top: 0;
@@ -130,6 +134,7 @@ div.card {
   
 }
 
+/* allow no animations for users that prefer reduced motion */
 @media (prefers-reduced-motion) {
   .logo {
     animation: none;
@@ -138,47 +143,53 @@ div.card {
 }
 
 @media print and (orientation: portrait) {
-        body {
-        font-family: Arial, Helvetica;
-        background-image: none;
-
-        }
+  
+  /* set fonts for print screen, remove the background image */
+  body {
+    font-family: Arial, Helvetica;
+    background-image: none;
+  }
         
-/* set the container of the nav_links to the width of the whole page */
+/* change the links container to grid display with 3 equal columns*/
 
-            ul.nav_links {
-              display: grid;
-              grid-template-columns: 1fr 1fr 1fr;
-            }
+  ul.nav_links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
-            nav {
-              width: 100%;
-            }
+/* change the width of the nav to 100% */
+  nav {
+    width: 100%;
+  }
 
-            .nav_item{
-              text-align : center;
-            }
+  /* center the text of the nav links in their respective columns */
+  .nav_item{
+    text-align : center;
+  }
     
-            .pricing {
-              display: flex;
-              flex-direction: row;
-              flex-wrap: nowrap;
-              align-items: flex-end;
-            }
+  /* change the display of the pricing container to flex with row direction, 
+     so all cards are visible on one page without scrolling */
+  .pricing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+  }
           
-            .card {
-            display: flex;
-            flex: 325px;
-            border: 2px solid #45ADDD;
-            }
-            
-            .gallery {
-                display: none;
-            }
+  /* set each card item with a flex basis of 325px and a solid border */
+  .card {
+  display: flex;
+  flex: 325px;
+  border: 2px solid #45ADDD;
+  }
+           
+  /* hide the gallery section for print view */
+  .gallery {
+      display: none;
+  }
 
-/* Without using list-style-type add the thumbs up entity as shown in the cards
-They should be just after the second li item in each card class */
-        .card li:nth-child(2)::after {
-        content: "\1F44D"; 
-        }
+/* select every second li item in each member of card class and add a thumbs-up emoji */
+  .card li:nth-child(2)::after {
+  content: "\1F44D"; 
+  }
 }
