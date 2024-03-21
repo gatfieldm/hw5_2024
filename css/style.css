@@ -1,4 +1,3 @@
-
 /* animate the logo with a keyframe */
 #logo {
   animation: logo 5s;
@@ -142,7 +141,7 @@ div.card {
     
     }
   
-}
+} /* end of media query for screen sizes >= 900px */
 
 /* allow no animations for users that prefer reduced motion */
 @media (prefers-reduced-motion) {
@@ -150,7 +149,7 @@ div.card {
     animation: none;
   }
 
-}
+} /* end of reduced motion media query */
 
 @media print and (orientation: portrait) {
   
@@ -202,4 +201,6 @@ div.card {
   .card li:nth-child(2)::after {
   content: "\1F44D"; 
   }
-}
+
+
+ }  /* end of print screen media query */
