@@ -154,6 +154,10 @@ div.card {
             nav {
               width: 100%;
             }
+
+            .nav_item{
+              text-align : center;
+            }
     
             .pricing {
               display: flex;
