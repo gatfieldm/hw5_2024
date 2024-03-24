@@ -155,7 +155,7 @@ div.card {
 
 } /* end of reduced motion media query */
 
-@media print {
+@media print and (orientation: portrait){
   
   /* set fonts for print screen, remove the background image */
   body {
