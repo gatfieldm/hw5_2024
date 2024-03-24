@@ -41,6 +41,10 @@ header {
   color: #0000EE;
 }
 
+.nav_links a {
+  color: #0000EE;
+}
+
 
 /* style the direct children of card class that are header elements */
 .card > header {
@@ -151,7 +155,7 @@ div.card {
 
 } /* end of reduced motion media query */
 
-@media print and (orientation: portrait) {
+@media print {
   
   /* set fonts for print screen, remove the background image */
   body {
@@ -161,21 +165,17 @@ div.card {
         
 /* change the links container to grid display with 3 equal columns*/
 
-  ul.nav_links {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+ul.nav_links {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
 
 /* change the width of the nav to 100% */
   nav {
     width: 100%;
   }
 
-  /* center the text of the nav links in their respective columns */
-  .nav_item{
-    text-align : center;
-  }
-    
   /* change the display of the pricing container to flex with row direction, 
      so all cards are visible on one page without scrolling */
   .pricing {
@@ -197,9 +197,14 @@ div.card {
       display: none;
   }
 
-/* select every second li item in each member of card class and add a thumbs-up emoji */
+  /* hide gallery label*/
+  #gallery {
+    display: none;
+  }
+
+  /* select every second li item in each member of card class and add a thumbs-up emoji */
   .card li:nth-child(2)::after {
-  content: "\1F44D"; 
+    content: "\1F44D"; 
   }
 
 
